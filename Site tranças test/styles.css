@@ -1,0 +1,346 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #ffd1e8; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.menu{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  background: #ff4fa3;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;  
+  width: 100%;
+
+  z-index: 9999;
+  box-sizing: border-box; 
+}
+
+
+
+ul{
+    list-style: none;
+}
+
+a:hover{
+    background-color: rgb(190, 88, 105);
+    transition: all 0.5s ease;
+}
+
+
+a{
+    text-decoration: none;
+    color: black
+}
+
+
+.banner{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.banner::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("img/img.trancas/trancas.img.jpeg") center/cover no-repeat;
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+
+.banner::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+
+.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 40px;
+}
+
+
+.sobre-texto {
+  flex: 1;
+  max-width: 600px;
+}
+
+
+.sobre-texto h2 {
+  margin-bottom: 20px;
+}
+
+
+.sobre-texto p {
+  line-height: 1.6;
+}
+
+
+.sobre-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.sobre-imagem img {
+  max-width: 50%;
+  border-radius: 12px;
+}
+
+
+@media (max-width: 768px) {
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+.menu{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  background: rgb(190, 88, 105);
+}
+
+
+.logo img{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+
+@media(max-width:768px){
+  .logo img{
+    width:70px;
+    height:70px;
+  }
+}
+
+
+#btn{
+  display:none;
+  font-size:30px;
+  color:white;
+  cursor:pointer;
+}
+
+
+.nav ul{
+  display:flex;
+  gap:20px;
+}
+
+
+@media (max-width:768px){
+
+  #btn{
+    display:block;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+  }
+
+  .nav ul{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    width: 130px;
+
+    background: #ff4fa3;
+    border-radius: 10px;
+    padding: 10px 0;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    display: none;
+  }
+
+  .nav ul li{
+    width:100%;
+    text-align:center;
+  }
+
+  .nav ul a{
+    display:block;
+    padding:10px;
+    color:white;
+    font-weight:bold;
+  }
+
+  .nav.ativo ul{
+    display:flex;
+  }
+}
+
+
+  .nav.ativo ul{
+    display: flex; 
+  }
+
+
+.btn-banner{
+  background: #ff4fa3;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.servicos { 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 40px; 
+    padding: 60px 20px;
+}
+
+
+.titulo-servicos h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.cards{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    width: 300px;
+    background: #ff69b4; 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+}
+
+
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.card h2{
+    padding: 15px;
+}
+
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    background: #ff4fa3;
+}
+
+
+a:hover{
+    background-color: #ff85c2;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.footer{
+  background: #ff4fa3;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 80px;
+}
+
+
+.footer p:first-child{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.footer p:last-child{
+  opacity: 0.8;
+}
+
+
+.btn-whatsapp{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#25D366;
+  color:white;
+  padding:14px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:15px;
+  transition:0.3s;
+}
+
+.btn-whatsapp i{
+  font-size:20px;
+}
+
+.btn-whatsapp:hover{
+  background:#1ebe5d;
+}
+
+
+
+.whatsapp-float i{
+  font-size:30px;
+}
